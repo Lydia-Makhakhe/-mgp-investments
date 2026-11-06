@@ -7,7 +7,7 @@ import {
   ArrowUpRight,
   Sparkles,
 } from "lucide-react";
-import "./Ourjourney.css";
+import "./OurJourney.css";
 
 const journeyStages = [
   {
