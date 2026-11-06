@@ -1,0 +1,263 @@
+/* =========================================
+   MGP INVESTMENTS
+   Navigation Bar
+========================================= */
+
+.navbar {
+  width: 100%;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--border-color);
+
+  /* Navbar scrolls naturally with the page */
+  position: relative;
+  top: auto;
+  z-index: 10;
+}
+
+.navbar-container {
+  max-width: var(--container-width);
+  min-height: 92px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.navbar-logo img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  transform-origin: center;
+}
+
+/* Gentle logo pulse */
+
+.navbar-logo:hover img {
+  animation: logoPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyboard accessibility */
+
+.navbar-logo:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar-links a {
+  color: var(--color-espresso);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* =========================================
+   ENQUIRY BUTTONS
+========================================= */
+
+.navbar-contact,
+.navbar-mobile-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: var(--color-espresso);
+  color: var(--color-ivory);
+
+  padding: 15px 22px;
+  min-height: 48px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  border-radius: 3px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-contact:hover {
+  background: var(--color-gold);
+  color: var(--color-espresso);
+}
+
+.navbar-mobile-contact,
+.navbar-menu-toggle {
+  display: none;
+}
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+.navbar a:focus-visible,
+.navbar button:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   MEDIUM SCREENS
+========================================= */
+
+@media (max-width: 1100px) {
+  .navbar-container {
+    padding: 0 24px;
+    gap: 20px;
+  }
+
+  .navbar-links {
+    gap: 16px;
+  }
+
+  .navbar-links a {
+    font-size: 15px;
+  }
+
+  .navbar-logo img {
+    width: 135px;
+  }
+
+  .navbar-contact {
+    padding: 13px 16px;
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 850px) {
+  .navbar-container {
+    min-height: 80px;
+    padding: 0 20px;
+  }
+
+  .navbar-logo img {
+    width: 145px;
+  }
+
+  .navbar-contact {
+    display: none;
+  }
+
+  .navbar-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    color: var(--color-espresso);
+
+    padding: 10px;
+    min-width: 48px;
+    min-height: 48px;
+
+    cursor: pointer;
+  }
+
+  .navbar-links {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: var(--color-white);
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 12px 24px 24px;
+    box-sizing: border-box;
+
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    padding: 16px 4px;
+    font-size: 17px;
+    line-height: 1.5;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .navbar-links .navbar-mobile-contact {
+    display: inline-flex;
+    align-self: flex-start;
+
+    margin-top: 18px;
+    padding: 14px 20px;
+
+    border: none;
+    color: var(--color-ivory);
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar *,
+  .navbar *::before,
+  .navbar *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

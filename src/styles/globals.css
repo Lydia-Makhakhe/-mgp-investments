@@ -1,0 +1,124 @@
+
+/* =========================================
+   MGP INVESTMENTS
+   Global Design System
+========================================= */
+
+:root {
+  /* Brand colours */
+  --color-gold: #B98224;
+  --color-espresso: #34210A;
+  --color-ivory: #F3E9DC;
+
+  /* Supporting colours */
+  --color-charcoal: #25211D;
+  --color-stone: #E8E1D8;
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-primary: "Inter", Arial, sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --section-spacing: 100px;
+
+  /* Borders and shadows */
+  --border-color: #E8E1D8;
+  --shadow-soft: 0 8px 30px rgba(52, 33, 10, 0.08);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+
+/* Accessible typography defaults */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  color: var(--color-espresso);
+}
+
+p {
+  max-width: 70ch;
+  margin-bottom: 1rem;
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* Clear keyboard focus indicator */
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* Avoid unnecessary animation for motion-sensitive users */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,297 @@
+/* =========================================
+   WHY CHOOSE MGP
+========================================= */
+
+.why-mgp {
+  position: relative;
+  width: 100%;
+  padding: 110px 24px 120px;
+  background-color: var(--color-ivory);
+  overflow: hidden;
+}
+
+.why-mgp-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* =========================================
+   SECTION INTRODUCTION
+========================================= */
+
+.why-mgp-intro {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 55px;
+}
+
+.why-mgp-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why-mgp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.why-mgp-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 1px;
+  background-color: var(--color-gold);
+}
+
+.why-mgp-heading h2 {
+  max-width: 600px;
+  color: var(--color-espresso);
+  font-size: clamp(36px, 4.5vw, 54px);
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1.12;
+}
+
+.why-mgp-heading h2 span {
+  color: var(--color-gold);
+}
+
+.why-mgp-description {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding-bottom: 5px;
+}
+
+.why-mgp-accent-line {
+  flex-shrink: 0;
+  width: 2px;
+  height: 65px;
+  margin-top: 5px;
+  background-color: var(--color-gold);
+}
+
+.why-mgp-description p {
+  max-width: 430px;
+  margin: 0;
+  color: #62584D;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   FEATURE GRID
+========================================= */
+
+.why-mgp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* =========================================
+   FEATURE CARDS
+========================================= */
+
+.why-mgp-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 245px;
+  padding: 30px 29px 32px;
+  background-color: var(--color-white);
+  border: 1px solid rgba(52, 33, 10, 0.07);
+  border-radius: 3px;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.why-mgp-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(185, 130, 36, 0.35);
+  box-shadow: 0 14px 35px rgba(52, 33, 10, 0.09);
+}
+
+.why-mgp-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.why-mgp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--color-gold);
+  background-color: rgba(185, 130, 36, 0.09);
+  border-radius: 50%;
+  transition:
+    color 0.35s ease,
+    background-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.why-mgp-card:hover .why-mgp-icon {
+  color: var(--color-white);
+  background-color: var(--color-gold);
+  transform: rotate(-6deg);
+}
+
+.why-mgp-number {
+  color: rgba(52, 33, 10, 0.35);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.why-mgp-card-content h3 {
+  margin-bottom: 11px;
+  color: var(--color-espresso);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.why-mgp-card-content p {
+  max-width: 340px;
+  margin: 0;
+  color: #746B61;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Small gold detail along the bottom */
+
+.why-mgp-card-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-gold);
+  transition: width 0.4s ease;
+}
+
+.why-mgp-card:hover .why-mgp-card-accent {
+  width: 100%;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 900px) {
+  .why-mgp {
+    padding: 90px 24px 100px;
+  }
+
+  .why-mgp-intro {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 35px;
+  }
+
+  .why-mgp-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .why-mgp-card {
+    min-height: 230px;
+    padding: 26px 24px 28px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+  .why-mgp {
+    padding: 75px 20px 80px;
+  }
+
+  .why-mgp-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 35px;
+  }
+
+  .why-mgp-heading {
+    gap: 13px;
+  }
+
+  .why-mgp-heading h2 {
+    font-size: clamp(34px, 9vw, 43px);
+    letter-spacing: -1.5px;
+  }
+
+  .why-mgp-description {
+    gap: 14px;
+  }
+
+  .why-mgp-accent-line {
+    height: 58px;
+  }
+
+  .why-mgp-description p {
+    font-size: 14px;
+  }
+
+  .why-mgp-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .why-mgp-card {
+    min-height: auto;
+    padding: 25px 23px 29px;
+  }
+
+  .why-mgp-card-top {
+    margin-bottom: 23px;
+  }
+
+  .why-mgp-card-content h3 {
+    font-size: 17px;
+  }
+
+  .why-mgp-card-content p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .why-mgp-card,
+  .why-mgp-icon,
+  .why-mgp-card-accent {
+    transition: none;
+  }
+
+  .why-mgp-card:hover {
+    transform: none;
+  }
+
+  .why-mgp-card:hover .why-mgp-icon {
+    transform: none;
+  }
+}
